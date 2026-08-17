@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+/* Make Tailwind dark: use the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ========================================================= */
+/* BASE THEME */
+/* ========================================================= */
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Default accent */
+  --accent: #18181b;
+  --accent-hover: #27272a;
+  --accent-soft: #f4f4f5;
+  --accent-text: #18181b;
+}
+
+html.dark {
+  --background: #18181b;
+  --foreground: #f4f4f5;
+
+  --accent: #f4f4f5;
+  --accent-hover: #e4e4e7;
+  --accent-soft: #27272a;
+  --accent-text: #18181b;
+}
+
+/* ========================================================= */
+/* COLOR MODES */
+/* ========================================================= */
+
+/* Amber */
+
+html[data-color-mode="amber"] {
+  --accent: #f59e0b;
+  --accent-hover: #d97706;
+  --accent-soft: #fef3c7;
+  --accent-text: #78350f;
+}
+
+html.dark[data-color-mode="amber"] {
+  --accent: #fbbf24;
+  --accent-hover: #f59e0b;
+  --accent-soft: #451a03;
+  --accent-text: #18181b;
+}
+
+/* Blue */
+
+html[data-color-mode="blue"] {
+  --accent: #3b82f6;
+  --accent-hover: #2563eb;
+  --accent-soft: #dbeafe;
+  --accent-text: #1e3a8a;
+}
+
+html.dark[data-color-mode="blue"] {
+  --accent: #60a5fa;
+  --accent-hover: #3b82f6;
+  --accent-soft: #172554;
+  --accent-text: #172554;
+}
+
+/* Pink */
+
+html[data-color-mode="pink"] {
+  --accent: #ec4899;
+  --accent-hover: #db2777;
+  --accent-soft: #fce7f3;
+  --accent-text: #831843;
+}
+
+html.dark[data-color-mode="pink"] {
+  --accent: #f472b6;
+  --accent-hover: #ec4899;
+  --accent-soft: #500724;
+  --accent-text: #500724;
+}
+
+/* Rose */
+
+html[data-color-mode="rose"] {
+  --accent: #f43f5e;
+  --accent-hover: #e11d48;
+  --accent-soft: #ffe4e6;
+  --accent-text: #881337;
+}
+
+html.dark[data-color-mode="rose"] {
+  --accent: #fb7185;
+  --accent-hover: #f43f5e;
+  --accent-soft: #4c0519;
+  --accent-text: #4c0519;
+}
+
+/* Emerald */
+
+html[data-color-mode="emerald"] {
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-soft: #d1fae5;
+  --accent-text: #064e3b;
+}
+
+html.dark[data-color-mode="emerald"] {
+  --accent: #34d399;
+  --accent-hover: #10b981;
+  --accent-soft: #022c22;
+  --accent-text: #022c22;
+}
+
+/* Black */
+
+html[data-color-mode="black"] {
+  --accent: #18181b;
+  --accent-hover: #27272a;
+  --accent-soft: #f4f4f5;
+  --accent-text: #18181b;
+}
+
+html.dark[data-color-mode="black"] {
+  --accent: #f4f4f5;
+  --accent-hover: #e4e4e7;
+  --accent-soft: #27272a;
+  --accent-text: #18181b;
+}
+
+/* ========================================================= */
+/* TAILWIND THEME VARIABLES */
+/* ========================================================= */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* ========================================================= */
+/* GLOBAL */
+/* ========================================================= */
+
+html {
+  background: var(--background);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+/* ========================================================= */
+/* ACCENT UTILITY CLASSES */
+/* ========================================================= */
+
+.accent-bg {
+  background-color: var(--accent);
+  color: var(--accent-text);
+}
+
+.accent-bg:hover {
+  background-color: var(--accent-hover);
+}
+
+.accent-soft {
+  background-color: var(--accent-soft);
+}
+
+.accent-text {
+  color: var(--accent);
+}
+
+.accent-border {
+  border-color: var(--accent);
+}
