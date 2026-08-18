@@ -17,22 +17,6 @@ The application provides a clean and intuitive workspace where tasks can be mana
 
 ---
 
-## 📸 Screenshots
-
-### 🏠 Dashboard
-
-![Task Management Dashboard](./screenshots/dashboard.png)
-
-### 📋 Task Management Board
-
-![Task Management Board](./screenshots/task-board.png)
-
-### 🌙 Dark Mode
-
-![Dark Mode](./screenshots/dark-mode.png)
-
----
-
 # ✨ Features
 
 ## 📋 Task Management
