@@ -3,28 +3,33 @@ import { createPool } from 'mysql2/promise';
 
 @Global()
 @Module({
-    providers: [
-        {
-            provide: 'DATABASE',
-            useFactory: async () => {
-                const pool = createPool({
-                    host: process.env.DB_HOST,
-                    port: Number(process.env.DB_PORT),
-                    user: process.env.DB_USER,
-                    password: process.env.DB_PASSWORD,
-                    database: process.env.DB_NAME,
-                    waitForConnections: true,
-                    connectionLimit: 10,
-                });
+  providers: [
+    {
+      provide: 'DATABASE',
+      useFactory: async () => {
+        const pool = createPool({
+          host: process.env.DB_HOST,
+          port: Number(process.env.DB_PORT),
+          user: process.env.DB_USER,
+          password: process.env.DB_PASSWORD,
+          database: process.env.DB_NAME,
 
-                await pool.query('SELECT 1');
+          ssl: {
+            rejectUnauthorized: false,
+          },
 
-                console.log('MySQL database connected successfully');
+          waitForConnections: true,
+          connectionLimit: 10,
+        });
 
-                return pool;
-            },
-        },
-    ],
-    exports: ['DATABASE'],
+        await pool.query('SELECT 1');
+
+        console.log('MySQL database connected successfully');
+
+        return pool;
+      },
+    },
+  ],
+  exports: ['DATABASE'],
 })
-export class DatabaseModule { }
+export class DatabaseModule {}
