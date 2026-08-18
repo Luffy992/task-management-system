@@ -1,249 +1,124 @@
-# Task Management System
+# 🚀 Task Management System
 
-A full-stack Task Management System that allows users to manage projects and tasks through a modern web interface.
+A modern, full-stack **Task Management System** designed to help users organize, track, and manage tasks efficiently.
 
-The application consists of a **Next.js frontend** and a **NestJS backend**, organized in a single repository.
+The application provides an intuitive workspace where tasks can be created, updated, filtered, searched, organized by status, and managed through a clean dashboard interface.
 
-## 🚀 Features
+The project follows a modern full-stack architecture with a separate frontend and backend, RESTful API communication, validation, and production deployment.
 
-### Task Management
+## 🌐 Live Demo
 
-- Create tasks
-- View tasks
-- Edit tasks
-- Delete tasks
-- View task details
-- Manage task information through an interactive dashboard
+🔗 **Frontend:**  
+https://task-management-frontend-g4in.onrender.com
 
-### Project Management
+🔗 **Backend API:**  
+https://task-management-system-1v9v.onrender.com
 
-- Create projects
-- View projects
-- Update project information
-- Manage tasks within projects
+---
 
-### User Interface
+## 📸 Preview
 
-- Modern responsive interface
-- Dashboard for managing tasks
-- Project management page
-- Login page
-- Task creation modal
-- Task editing modal
-- Task details modal
-- Theme and color mode controls
-
-## 🛠️ Tech Stack
-
-### Frontend
-
-- Next.js
-- React
-- TypeScript
-- CSS
-
-### Backend
-
-- NestJS
-- TypeScript
-- Node.js
-
-## 📁 Project Structure
-
-```text
-task-management-system/
-│
-├── frontend/
-│   ├── app/
-│   │   ├── dashboard/
-│   │   ├── login/
-│   │   ├── projects/
-│   │   ├── globals.css
-│   │   └── layout.tsx
-│   │
-│   ├── components/
-│   │   └── tasks/
-│   │       ├── AddTaskModal.tsx
-│   │       ├── EditTaskModal.tsx
-│   │       ├── TaskDetailsModal.tsx
-│   │       ├── ThemeToggle.tsx
-│   │       └── ColorMode.tsx
-│   │
-│   ├── lib/
-│   │   ├── api.ts
-│   │   └── auth.ts
-│   │
-│   └── package.json
-│
-├── backend/
-│   ├── src/
-│   │   ├── auth/
-│   │   ├── database/
-│   │   ├── projects/
-│   │   ├── tasks/
-│   │   ├── app.module.ts
-│   │   └── main.ts
-│   │
-│   ├── test/
-│   └── package.json
-│
-└── .gitignore
-```
-
-## ⚙️ Installation
-
-### 1. Clone the repository
-
-```bash
-git clone https://github.com/Luffy992/task-management-system.git
-```
-
-Navigate to the project directory:
-
-```bash
-cd task-management-system
-```
-
-## 🖥️ Frontend Setup
-
-Navigate to the frontend directory:
-
-```bash
-cd frontend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Start the development server:
-
-```bash
-npm run dev
-```
-
-The frontend will typically run on:
-
-```text
-http://localhost:3000
-```
-
-## ⚙️ Backend Setup
-
-Open a new terminal and navigate to the backend directory:
-
-```bash
-cd backend
-```
-
-Install dependencies:
-
-```bash
-npm install
-```
-
-Create the required environment configuration if needed.
-
-Example:
-
-```env
-PORT=3001
-```
-
-Start the backend:
-
-```bash
-npm run start:dev
-```
-
-The backend will typically run on:
-
-```text
-http://localhost:3001
-```
-
-## 🔌 API Integration
-
-The frontend communicates with the NestJS backend through API requests.
-
-The main backend modules include:
-
-### Authentication
-
-Handles application authentication functionality.
-
-### Projects
-
-Provides functionality for:
-
-- Creating projects
-- Retrieving projects
-- Updating projects
-- Managing project-related data
-
-### Tasks
-
-Provides functionality for:
-
-- Creating tasks
-- Retrieving tasks
-- Updating tasks
-- Deleting tasks
-
-## 🧩 Main Components
-
-The frontend includes reusable task-related components:
-
-- `AddTaskModal`
-- `EditTaskModal`
-- `TaskDetailsModal`
-- `ThemeToggle`
-- `ColorMode`
-
-These components help organize the user interface and improve code reusability.
-
-## 📸 Screenshots
-
-Screenshots of the application can be added here.
+<!-- Add screenshots to the screenshots folder and update the paths below -->
 
 ### Dashboard
 
-![Dashboard Screenshot](./screenshots/dashboard.png)
+![Task Management Dashboard](./screenshots/dashboard.png)
 
-### Projects
+### Task Management Board
 
-![Projects Screenshot](./screenshots/projects.png)
+![Task Management Board](./screenshots/task-board.png)
 
-### Task Management
+---
 
-![Task Management Screenshot](./screenshots/tasks.png)
+## ✨ Features
 
-> Add screenshots to a `screenshots` folder in the root directory before using these image links.
+### 📋 Task Management
 
-## 🔮 Future Improvements
+- Create new tasks
+- View existing tasks
+- Update task details
+- Delete tasks
+- Organize tasks by workflow status
+- Manage task priorities
+- Add due dates
+- Assign members
+- Add labels to tasks
 
-Possible improvements include:
+### 📊 Task Organization
 
-- User registration
-- JWT authentication
-- Role-based access control
-- Task priority levels
-- Task deadlines
-- Task status tracking
-- Search and filtering
-- Pagination
-- Notifications
-- Drag-and-drop task management
-- Deployment
+Tasks are organized into different workflow stages:
 
-## 👨‍💻 Author
+- 📝 **To Do**
+- ⚡ **Doing**
+- ✅ **Completed**
 
-**Somesh**
+### 🔍 Search & Filtering
 
-GitHub: [Luffy992](https://github.com/Luffy992)
+- Search tasks
+- Filter tasks
+- Organize tasks based on available fields
+- Easily navigate and manage large numbers of tasks
 
-## 📄 License
+### 🎨 User Interface
 
-This project is created for learning, development, and internship assignment purposes.
+- Clean and modern dashboard
+- Responsive layout
+- Task board interface
+- Table-based task organization
+- Light/Dark mode support
+
+### 🔗 Frontend–Backend Integration
+
+- RESTful API communication
+- Cross-Origin Resource Sharing (CORS) configuration
+- Environment-based configuration
+- Production-ready deployment
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+
+- **React**
+- **TypeScript**
+- **HTML5**
+- **CSS**
+- REST API Integration
+
+## Backend
+
+- **NestJS**
+- **Node.js**
+- **TypeScript**
+- RESTful APIs
+- ValidationPipe
+- CORS
+
+## Deployment
+
+- **Render**
+
+---
+
+# 🏗️ Architecture
+
+The application follows a separated frontend and backend architecture.
+
+```text
+                    ┌─────────────────────┐
+                    │      Frontend       │
+                    │   React + TypeScript│
+                    └──────────┬──────────┘
+                               │
+                               │ REST API
+                               ▼
+                    ┌─────────────────────┐
+                    │       Backend       │
+                    │ NestJS + TypeScript │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │      Database       │
+                    └─────────────────────┘
