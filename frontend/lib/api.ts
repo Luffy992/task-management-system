@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+const API_URL = 'https://task-management-system-1v9v.onrender.com';
 
 export async function getTasks() {
   const response = await fetch(`${API_URL}/tasks`);
